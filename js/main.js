@@ -1,4 +1,3 @@
-// Charge un composant HTML dans un élément
 async function loadComponent(selector, url) {
   const el = document.querySelector(selector);
   if (!el) return;
@@ -11,7 +10,6 @@ async function loadComponent(selector, url) {
   }
 }
 
-// Surligne le lien de la page courante
 function setActiveLink() {
   let page = location.pathname.replace(/\/$/, '').split('/').pop().replace('.html', '');
   if (!page) page = 'index';
@@ -20,37 +18,54 @@ function setActiveLink() {
   });
 }
 
-// Menu mobile
 function initBurger() {
   const burger = document.getElementById('burger');
-  const navLinks = document.getElementById('nav-links');
-  if (burger && navLinks) {
-    burger.addEventListener('click', () => navLinks.classList.toggle('open'));
-  }
+  const nav = document.getElementById('nav-links');
+  if (burger && nav) burger.addEventListener('click', () => nav.classList.toggle('open'));
 }
 
-// Année dynamique
 function setYear() {
-  const year = document.getElementById('year');
-  if (year) year.textContent = new Date().getFullYear();
+  const y = document.getElementById('year');
+  if (y) y.textContent = new Date().getFullYear();
 }
 
-// Animation des barres de compétences
 function initSkillBars() {
   const bars = document.querySelectorAll('.bar-fill');
   if (!bars.length) return;
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.style.width = entry.target.dataset.level + '%';
-        observer.unobserve(entry.target);
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+      if (e.isIntersecting) {
+        e.target.style.width = e.target.dataset.level + '%';
+        obs.unobserve(e.target);
       }
     });
   }, { threshold: 0.3 });
-  bars.forEach((bar) => observer.observe(bar));
+  bars.forEach((b) => obs.observe(b));
 }
 
-// Démarrage
+// Compteurs animés (chiffres clés)
+function initCounters() {
+  const nums = document.querySelectorAll('[data-count]');
+  if (!nums.length) return;
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+      if (!e.isIntersecting) return;
+      const el = e.target;
+      const target = parseInt(el.dataset.count, 10);
+      const suffix = el.dataset.suffix || '';
+      const start = performance.now();
+      const duration = 1400;
+      (function tick(now) {
+        const p = Math.min((now - start) / duration, 1);
+        el.textContent = Math.floor(target * (1 - Math.pow(1 - p, 3))) + suffix;
+        if (p < 1) requestAnimationFrame(tick);
+      })(start);
+      obs.unobserve(el);
+    });
+  }, { threshold: 0.5 });
+  nums.forEach((n) => obs.observe(n));
+}
+
 document.addEventListener('DOMContentLoaded', async () => {
   await Promise.all([
     loadComponent('#header', '/components/header.html'),
@@ -60,4 +75,5 @@ document.addEventListener('DOMContentLoaded', async () => {
   initBurger();
   setYear();
   initSkillBars();
+  initCounters();
 });

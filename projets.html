@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projets | Lenny Grenier</title>
+  <title>Réalisations | Lenny Grenier</title>
+  <meta name="description" content="Sélection de projets d'infrastructure, d'automatisation et de développement réalisés par Lenny Grenier.">
   <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
@@ -11,36 +12,53 @@
 
   <section>
     <div class="container">
-      <h2 class="section-title">Mes Projets</h2>
+      <div class="section-head">
+        <p class="eyebrow">Réalisations</p>
+        <h2>Projets sélectionnés</h2>
+        <p>Un aperçu de mes travaux en infrastructure, automatisation et développement.</p>
+      </div>
+
       <div class="grid">
 
-        <!-- ✏️ REMPLACE CES EXEMPLES PAR TES VRAIS PROJETS -->
-        <div class="card">
-          <h3>Homelab Docker</h3>
-          <p>Infrastructure personnelle avec reverse proxy, monitoring et services auto-hébergés.</p>
-          <div class="tags">
-            <span class="tag">Docker</span><span class="tag">Traefik</span><span class="tag">Grafana</span>
+        <!-- ✏️ REMPLACE PAR TES VRAIS PROJETS + captures dans /assets -->
+        <article class="card project">
+          <div class="project-img">
+            <img src="/assets/projet-1.jpg" alt="Capture du projet Infrastructure Docker" onerror="this.style.display='none'">
           </div>
-          <p style="margin-top:14px"><a href="https://github.com/Azemo-dev" target="_blank" rel="noopener">Voir sur GitHub →</a></p>
-        </div>
+          <div class="project-body">
+            <p class="project-meta">Infrastructure</p>
+            <h3>Plateforme auto-hébergée</h3>
+            <p>Reverse proxy, certificats automatiques, supervision et sauvegardes sur une stack 100 % conteneurisée.</p>
+            <div class="tags"><span class="tag">Docker</span><span class="tag">Traefik</span><span class="tag">Grafana</span></div>
+            <a class="project-link" href="https://github.com/Azemo-dev" target="_blank" rel="noopener">Voir le projet →</a>
+          </div>
+        </article>
 
-        <div class="card">
-          <h3>Pipeline CI/CD</h3>
-          <p>Pipeline automatisé : tests, build d'image Docker et déploiement à chaque push.</p>
-          <div class="tags">
-            <span class="tag">GitHub Actions</span><span class="tag">Docker</span><span class="tag">Linux</span>
+        <article class="card project">
+          <div class="project-img">
+            <img src="/assets/projet-2.jpg" alt="Capture du projet Pipeline CI/CD" onerror="this.style.display='none'">
           </div>
-          <p style="margin-top:14px"><a href="https://github.com/Azemo-dev" target="_blank" rel="noopener">Voir sur GitHub →</a></p>
-        </div>
+          <div class="project-body">
+            <p class="project-meta">Automatisation</p>
+            <h3>Pipeline CI/CD complet</h3>
+            <p>Tests automatiques, construction d'images et déploiement continu à chaque modification du code.</p>
+            <div class="tags"><span class="tag">GitHub Actions</span><span class="tag">Docker</span><span class="tag">Linux</span></div>
+            <a class="project-link" href="https://github.com/Azemo-dev" target="_blank" rel="noopener">Voir le projet →</a>
+          </div>
+        </article>
 
-        <div class="card">
-          <h3>Automatisation Ansible</h3>
-          <p>Playbooks pour configurer et sécuriser automatiquement un parc de serveurs Linux.</p>
-          <div class="tags">
-            <span class="tag">Ansible</span><span class="tag">Bash</span><span class="tag">Linux</span>
+        <article class="card project">
+          <div class="project-img">
+            <img src="/assets/projet-3.jpg" alt="Capture du projet Ansible" onerror="this.style.display='none'">
           </div>
-          <p style="margin-top:14px"><a href="https://github.com/Azemo-dev" target="_blank" rel="noopener">Voir sur GitHub →</a></p>
-        </div>
+          <div class="project-body">
+            <p class="project-meta">Sécurité & Systèmes</p>
+            <h3>Configuration automatisée de serveurs</h3>
+            <p>Playbooks Ansible pour provisionner et sécuriser un parc de serveurs de façon identique et reproductible.</p>
+            <div class="tags"><span class="tag">Ansible</span><span class="tag">Bash</span><span class="tag">Linux</span></div>
+            <a class="project-link" href="https://github.com/Azemo-dev" target="_blank" rel="noopener">Voir le projet →</a>
+          </div>
+        </article>
 
       </div>
     </div>

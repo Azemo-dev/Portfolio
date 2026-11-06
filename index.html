@@ -3,45 +3,116 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfolio de Lenny Grenier, étudiant DevOps en recherche d'alternance.">
-  <title>Lenny Grenier | Portfolio DevOps</title>
+  <title>Lenny Grenier | Ingénieur DevOps & Fondateur</title>
+  <meta name="description" content="Lenny Grenier, ingénieur DevOps et fondateur de [NOM ENTREPRISE]. Infrastructure, automatisation, CI/CD et développement sur mesure.">
+  <meta property="og:title" content="Lenny Grenier | Ingénieur DevOps & Fondateur">
+  <meta property="og:description" content="Infrastructure, automatisation et développement pour des projets fiables et évolutifs.">
+  <meta property="og:image" content="/assets/og-image.jpg">
+  <meta property="og:type" content="website">
   <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
   <div id="header"></div>
 
+  <!-- HERO -->
   <header class="hero">
-    <div class="container">
-      <h1>Salut, je suis <span>Lenny Grenier</span></h1>
-      <p class="subtitle">Étudiant DevOps & Administration Systèmes</p>
-      <p class="lead">
-        Passionné par l'automatisation, les conteneurs et l'infrastructure cloud,
-        je recherche une alternance pour mettre mes compétences en pratique.
-      </p>
-      <a href="/projets" class="btn btn-primary">Voir mes projets</a>
-      <a href="/contact" class="btn btn-outline">Me contacter</a>
+    <div class="container hero-grid">
+      <div>
+        <span class="badge">Fondateur de [NOM ENTREPRISE] ✏️</span>
+        <h1>J'accompagne les projets avec une <span>infrastructure fiable</span> et automatisée.</h1>
+        <p class="lead">
+          Ingénieur DevOps et entrepreneur, je conçois, déploie et maintiens des environnements
+          modernes : conteneurs, CI/CD, systèmes Linux et applications web sur mesure.
+        </p>
+        <div class="hero-actions">
+          <a href="/projets" class="btn btn-primary">Découvrir mes réalisations</a>
+          <a href="/contact" class="btn btn-outline">Discutons de votre projet</a>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <div class="photo-frame">
+          <img src="/assets/photo.jpg" alt="Portrait de Lenny Grenier" onerror="this.style.display='none'">
+        </div>
+      </div>
     </div>
   </header>
 
+  <!-- CHIFFRES CLÉS ✏️ (mets uniquement des chiffres réels) -->
+  <div class="stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat"><div class="num" data-count="3" data-suffix="+">0</div><div class="label">Années d'expérience</div></div>
+        <div class="stat"><div class="num" data-count="15" data-suffix="+">0</div><div class="label">Projets réalisés</div></div>
+        <div class="stat"><div class="num" data-count="99" data-suffix="%">0</div><div class="label">Disponibilité visée</div></div>
+        <div class="stat"><div class="num" data-count="24" data-suffix="h">0</div><div class="label">Délai de réponse</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
   <section class="alt">
     <div class="container">
-      <h2 class="section-title">Ce que je fais</h2>
+      <div class="section-head">
+        <p class="eyebrow">Expertise</p>
+        <h2>Ce que je peux faire pour vous</h2>
+        <p>Une approche complète, de la conception de l'infrastructure à sa mise en production.</p>
+      </div>
       <div class="grid">
         <div class="card">
           <div class="icon">🐳</div>
-          <h3>Conteneurisation</h3>
-          <p>Docker, Docker Compose et orchestration pour des déploiements reproductibles.</p>
+          <h3>Conteneurisation & orchestration</h3>
+          <p>Mise en place d'environnements Docker reproductibles, isolés et faciles à faire évoluer.</p>
         </div>
         <div class="card">
           <div class="icon">⚙️</div>
-          <h3>CI/CD</h3>
-          <p>Pipelines GitHub Actions et GitLab CI pour automatiser tests et déploiements.</p>
+          <h3>CI/CD & automatisation</h3>
+          <p>Pipelines de tests, de build et de déploiement automatiques pour livrer plus vite et plus sûr.</p>
         </div>
         <div class="card">
-          <div class="icon">🐧</div>
-          <h3>Systèmes Linux</h3>
-          <p>Administration, scripting Bash, supervision et sécurisation de serveurs.</p>
+          <div class="icon">🛡️</div>
+          <h3>Systèmes & sécurité</h3>
+          <p>Administration Linux, durcissement des serveurs, supervision et sauvegardes.</p>
         </div>
+        <div class="card">
+          <div class="icon">💻</div>
+          <h3>Développement sur mesure</h3>
+          <p>Applications web et outils internes adaptés à vos besoins, de la maquette au déploiement.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- À PROPOS -->
+  <section>
+    <div class="container about-grid">
+      <div class="section-head" style="margin-bottom:0">
+        <p class="eyebrow">À propos</p>
+        <h2>Technique rigoureux, esprit d'entrepreneur.</h2>
+      </div>
+      <div class="about-text">
+        <p>
+          Je suis <strong>Lenny Grenier</strong>, ingénieur DevOps et fondateur de
+          <strong>[NOM ENTREPRISE]</strong> ✏️. Mon approche allie exigence technique et sens du
+          business : comprendre votre besoin, proposer la solution la plus simple qui tient dans le temps,
+          et la livrer proprement.
+        </p>
+        <ul class="checklist">
+          <li>Solutions documentées et maintenables</li>
+          <li>Communication claire, sans jargon inutile</li>
+          <li>Bonnes pratiques de sécurité dès la conception</li>
+          <li>Engagement sur les délais et la qualité</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="alt">
+    <div class="container">
+      <div class="cta-band" style="margin-top:0">
+        <h3>Un projet en tête ?</h3>
+        <p>Parlons-en : je reviens vers vous sous 24 à 48 h.</p>
+        <a href="/contact" class="btn btn-primary">Prendre contact</a>
       </div>
     </div>
   </section>
